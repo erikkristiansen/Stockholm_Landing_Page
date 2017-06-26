@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <head>
+        <title>Landing Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <section class="intro">
+            <div class="inner">
+                <div class="content">
+                    <h1>T-Centralen</h1>
+                    <a class="btn" id="myBtn" href="#">Get Started</a>
+                </div>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <!-- <h2>Modal Header</h2> -->
+                  <img src="sthlm_sil_2.jpg" class="img-responsive" alt="Stockhom" style="width:547px;height:196px;">
+                </div>
+                <div class="modal-body">
+                    <form action="#" id="contact" name="myForm" onsubmit="validate()">
+                          <div class="container">
+                            <div class="head">
+                              <h2>Say Hej!</h2>
+                            </div>
+                            <input type="text" name="name" placeholder="Name" /><br />
+                            <input type="email" name="email" placeholder="Email" /><br />
+                            <!-- <div class="message">Message Sent</div> -->
+                            <button class="button" type="submit">Send!</button>
+                          </div>
+                    </form>
+                  <!-- <p>Some text in the Modal Body</p>
+                  <p>Some other text...</p> -->
+                </div>
+                <div class="modal-footer">
+                  <h6>&copy;Erik Kristiansen Design</h6>
+                </div>
+              </div>
+
+            </div>
+        </section>
+        <p>The City of Stockholm will carry out extensive investments in
+            digital innovation in the upcoming years. In conjunction with the
+            City Council's decision on a strategy for a smart and connected city,
+            SEK 115 million will be earmarked for digital innovation.</p>
+        <p>In addition to this special initiative, the city has undertaken
+            extensive projects to develop digital support within schools, and
+            an increased focus has now been placed on social care and social
+            services. A total investment of SEK 545 million goes directly to
+            projects aiming to improve the city's operations with the help of
+            digitization during 2017-2018.</p>
+        <p>The strategy's main focus is to fully take advantage of the
+            opportunities that arises with development in areas such as the
+            Internet of Things and big data analysis, as well as to take the
+            City's work with open data to the next level.</p>
+        <br>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+</script>
+<script>
+    function validate() {
+        if (document.myForm.name.value=="") {
+                alert("Please enter your name!");
+                document.myForm.name.focus();
+                return false;
+        }
+
+        if (document.myForm.email.value=="") {
+            alert("Please enter your email address!");
+            document.myForm.email.focus();
+            return false;
+        }
+    }
+</script>
+    </body>
+
+</html>
